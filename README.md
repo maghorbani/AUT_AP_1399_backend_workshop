@@ -1,11 +1,11 @@
-##django example
+## django example
 
-####prerequisites
+#### prerequisites
 * a proper version of python3
 * the pip package manager
 * [Optional] a python virtial environment tool *I'm using the python -m venv*
 
-####setting up the project
+#### setting up the project
 1. creating and activating the virtual environment (it can change based on the venv tool you use)
 ```
 python3 -m pip install virtualenv
@@ -23,7 +23,7 @@ cd mysite&&python manage.py migrate
 python manage.py createsuperuser
 ```
 
-####developement test and tools
+#### developement test and tools
 1. to run webserver:
 ```
 python manage.py runserver
