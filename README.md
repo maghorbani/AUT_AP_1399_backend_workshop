@@ -13,6 +13,7 @@ python3 -m venv env
 source env/bin/activate
 ```
 or in windows the 3rd line would be sth like: `./env/scripts/activate`
+
 2. installing python packages listed in req.txt
 ```
 pip install -r req.txt
