@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<a class="btn btn-secondary btn-sm mb-3" href="{% url 'posts:index' %}">Back To Posts</a>
+<h1 class="text-center mb-3">{{ post.title }}</h1>
+<p>{{ post.body }}</p>
+{% if error_message %}
+<p class="alert alert-danger">
+	<strong>{{ error_message }}</strong>
+</p>
+{% endif %}
+    <h4>Comments on this post</h4>
+	{% for comment in post.comment_set.all %}
+	<p>{{ comment.text }}</p>
+	{% endfor %}
+	
+{% endblock %}

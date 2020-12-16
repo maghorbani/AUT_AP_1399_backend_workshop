@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% block content %} 
+
+<h1 class="text-center mb-3">Posts</h1>
+  {% if posts %}
+    {% for post in posts %}
+      <div class="card mb-3">
+        <div class="card-body">
+            <h3>{{ post.title }}</h3>
+          <p class="lead">{{ post.body }}</p>
+          <a href="{% url 'posts:details' post.id %}" class="btn btn-primary btn-sm">details</a>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No Post available</p>
+  {% endif %}
+{% endblock %}
